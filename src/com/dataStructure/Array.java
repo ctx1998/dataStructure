@@ -82,7 +82,7 @@ public class Array<T> {
      * @return
      */
     public T remove(int index) {
-        if(size==data.length/2)
+        if(size==data.length/4 &&(data.length*2/3)!=0)
             resize(data.length*2/3);
         if(index>=0&&index<size) {
             T temp=data[index];
