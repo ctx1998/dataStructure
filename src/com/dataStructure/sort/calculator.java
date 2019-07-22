@@ -70,14 +70,16 @@ public class calculator {
         int times=5000;
         Sort sort=new Sort();
         boolean succeed=true;
-        for(int i=0;i<times;i++)
+       /* for(int i=0;i<times;i++)
         {
             int[] arr=generateArray(size,value);
+            printArray(arr);
             int[] arr1=copyArray(arr);
             int[] arr2=copyArray(arr);
            // sort.bubbleSort(arr1);
            // sort.selectionSort(arr1);
-            sort.insertionSort(arr1);
+           // sort.insertionSort(arr1);
+            sort.processSrot(arr1,0,arr1.length-1);
             correctlyMethod(arr2);
             if(!equalsArray(arr1,arr2))
             {
@@ -90,9 +92,11 @@ public class calculator {
                 succeed=false;
                 break;
             }
-        }
+        }*/
         //测试printArray是否正确
-        int[] arr=new int[]{1,2,3};
+        int[] arr=new int[]{1,3,4,2,5};
+        int num=sort.processSrot(arr,0,arr.length-1);
+        System.out.println("小和为"+num);
         printArray(arr);
         System.out.println(succeed?"Nice!":"Fucking fucked");
     }
