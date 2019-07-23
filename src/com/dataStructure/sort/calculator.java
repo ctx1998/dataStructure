@@ -1,7 +1,5 @@
 package com.dataStructure.sort;
 
-import com.dataStructure.sort.Sort;
-
 import java.util.Arrays;
 
 //对数器
@@ -68,18 +66,30 @@ public class calculator {
         int size=10;
         int value=50;
         int times=5000;
-        Sort sort=new Sort();
+        //快速排序
+        quickSort qSort=new quickSort();
+        //冒泡排序
+        bubbleSort bSort=new bubbleSort();
+        //插入排序
+        insertionSort iSort=new insertionSort();
+        //选择排序
+        selectionSort sSort=new selectionSort();
+        //归并排序
+        processSort pSort=new processSort();
+        //堆排序
+        heapSort hSort=new heapSort();
         boolean succeed=true;
-       /* for(int i=0;i<times;i++)
+       for(int i=0;i<times;i++)
         {
             int[] arr=generateArray(size,value);
-            printArray(arr);
             int[] arr1=copyArray(arr);
             int[] arr2=copyArray(arr);
-           // sort.bubbleSort(arr1);
-           // sort.selectionSort(arr1);
-           // sort.insertionSort(arr1);
-            sort.processSrot(arr1,0,arr1.length-1);
+          /*  bSort.bubbleSort(arr1);
+            sSort.selectionSort(arr1);
+            iSort.insertionSort(arr1);
+            pSort.processSort(arr1,0,arr1.length-1);
+            qSort.quickSort(arr1,0,arr.length-1);*/
+            hSort.heapSort(arr1);
             correctlyMethod(arr2);
             if(!equalsArray(arr1,arr2))
             {
@@ -92,12 +102,7 @@ public class calculator {
                 succeed=false;
                 break;
             }
-        }*/
-        //测试printArray是否正确
-        int[] arr=new int[]{1,3,4,2,5};
-        int num=sort.processSrot(arr,0,arr.length-1);
-        System.out.println("小和为"+num);
-        printArray(arr);
-        System.out.println(succeed?"Nice!":"Fucking fucked");
+        }
+       System.out.println(succeed?"Nice!":"Fucking fucked");
     }
 }
