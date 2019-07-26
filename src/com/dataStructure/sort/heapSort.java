@@ -50,6 +50,5 @@ public class heapSort {
             heapify(arr,0,size);//由于第一个值变小，所以需要进行heapify的操作，让其重新成为大根堆
             swap(arr,0,--size);
         }
-
     }
 }
