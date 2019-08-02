@@ -1,9 +1,9 @@
-package com.dataStructure;
+package com.dataStructure.array;
 
 /**
  * 用于二次封装数组类
  */
-public class Array<T> {
+public class arrayUtil<T> {
     private T[] data;
     private int size;//表示数组元素的个数
 
@@ -12,12 +12,12 @@ public class Array<T> {
      * capacity用于表示数组的长度
      * @param capacity
      */
-    public Array(int capacity){
+    public arrayUtil(int capacity){
         data=(T[])new Object[capacity];//不能直接使用泛型构造函数，可以先构造int类型再转换成泛型的类型
         size=0;
     }
 
-    public Array(){
+    public arrayUtil(){
         this(10);//如果没有传参,默认为10 capacity:10是Intellij给的语义表明10是用来给capacity传值
     }
 
