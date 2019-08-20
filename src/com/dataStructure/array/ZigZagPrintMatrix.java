@@ -15,7 +15,6 @@ public class ZigZagPrintMatrix {
             tC=tC==endC?endC:tC+1;
             dC=dR==endR?dC+1:dC;
             dR=dR==endR?endR:dR+1;
-
             flag=!flag;
         }
         System.out.println();

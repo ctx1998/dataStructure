@@ -3,15 +3,11 @@ package com.dataStructure.sort;
 import java.util.Arrays;
 
 public class quickSort {
-
-
-
     public void swap(int[] arr,int x,int y){
         int temp=arr[x];
         arr[x]=arr[y];
         arr[y]=temp;
     }
-
     //快速排序
     public void quickSort(int[] arr,int L,int R){
         if(arr==null||arr.length<2)

@@ -4,7 +4,7 @@ package com.dataStructure.sort;
  * 堆排序
  */
 public class heapSort {
-    //插入一个数使其在原有的大大根堆上在变成大根堆
+    //插入一个数使其在原有的大根堆上在变成大根堆
     public void heapInsert(int[] arr,int index){
         //其中arr的内容已经为大根堆，将index位置的值加入进去,使其再变成大根堆
         while(arr[index]>arr[(index-1)/2])//将其先放到最后一个位置上再与父节点进行比较
